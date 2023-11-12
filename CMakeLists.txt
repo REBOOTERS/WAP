@@ -3,4 +3,4 @@ project(WAP)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(WAP main.cpp)
+add_executable(WAP src/main.cpp)
