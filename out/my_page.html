@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en-us">
+
+<body>
+
+<button onclick="call_add()">call_add</button>
+<button onclick="call_string_input()">call_string_input</button>
+<script type='text/javascript'>
+    function call_add() {
+        const result = Module.ccall(
+            "add", // name of C function
+            Number, // return type
+            [Number, Number], // argument types
+            [2, 2], // arguments
+        );
+        console.log(result)
+    }
+
+    let times = 0;
+
+    function call_string_input() {
+        times++
+        Module.ccall(
+            "call_with_string", // name of C function
+            null, // return type
+            [Number, Number, String, Number], // argument types
+            [2, 2, "I am from web", times], // arguments
+        );
+    }
+</script>
+<script async type="text/javascript" src="sum.js"></script>
+</body>
+</html>
