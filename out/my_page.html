@@ -20,12 +20,14 @@
 
     function call_string_input() {
         times++
+        var strPtr = allocate(intArrayFromString("I am from Web"), ALLOC_NORMAL)
         Module.ccall(
             "call_with_string", // name of C function
             null, // return type
             [Number, Number, String, Number], // argument types
-            [2, 2, "I am from web", times], // arguments
+            [2, 2, strPtr, times], // arguments
         );
+        _free(strPtr)
     }
 </script>
 <script async type="text/javascript" src="sum.js"></script>

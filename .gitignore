@@ -32,3 +32,5 @@
 *.app
 
 cmake-build-debug
+out/sum.html
+out/index.html

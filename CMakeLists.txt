@@ -15,6 +15,6 @@ aux_source_directory(${PROJECT_SOURCE_DIR}/src SRC_LIST)
 message(STATUS ${SRC_LIST})
 
 add_executable(WAP ${SRC_LIST}
-        out/test.c)
+        src/test.c)
 
 #add_library(WAP SHARED src/sum.cpp)
