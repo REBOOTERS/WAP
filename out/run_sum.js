@@ -14,6 +14,6 @@ WebAssembly.instantiate(src, {env: env})
         // console.log(result.instance.exports)
         console.log(result.instance.exports.add(11, 33));
 
-        console.log(result.instance.exports.call_with_string(1,2,"Hello WebAssembly",100))
+        console.log(result.instance.exports.call_with_string(1, 2, "Hello WebAssembly", 100))
     })
     .catch(e => console.log(e));
