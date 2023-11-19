@@ -8,7 +8,7 @@ int add(int a, int b) {
 }
 
 int call_with_string(int a, int b, const char *host, int times) {
+    printf("call_with_string Called \n");
+    printf("a = %d, b = %d, host = %s,times=%d\n", a, b, host, times);
     return a * b + times;
-//    printf("call_with_string Called \n");
-//    printf("a = %d, b = %d, host = %s,times=%d\n", a, b, host, times);
 }
